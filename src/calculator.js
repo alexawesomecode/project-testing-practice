@@ -1,30 +1,35 @@
 const calculator = () => {
   const check = (...num) => {
-    num = num[0]
-    for (let el of num) {
-      if (isNaN(el) === true) {
+    const [numb] = num;
+    for (const el of numb) {
+      if (typeof el !== 'number') {
         return false;
       }
     }
+    return '';
   };
+
   const add = (...num) => {
     if (check(num) === false) {
       return undefined;
     }
     return [...num].reduce((prev, curr) => prev + curr);
   };
+
   const mul = (...num) => {
     if (check(num) === false) {
       return undefined;
     }
     return [...num].reduce((prev, curr) => prev * curr);
   };
+
   const div = (...num) => {
     if (check(num) === false) {
       return undefined;
     }
     return [...num].reduce((prev, curr) => prev / curr);
   };
+
   const sub = (...num) => {
     if (check(num) === false) {
       return undefined;
@@ -36,11 +41,9 @@ const calculator = () => {
     mul,
     div,
     sub,
-    add
+    add,
   };
 };
 
 
-
-;
 export default calculator;

@@ -1,5 +1,5 @@
 const cipher = (str, shift) => {
-  let caps = {
+  const caps = {
     a: 1,
     b: 2,
     c: 3,
@@ -25,17 +25,17 @@ const cipher = (str, shift) => {
     w: 23,
     x: 24,
     y: 25,
-    z: 26
+    z: 26,
   };
   let arr = [];
-  let alps = Object.keys(caps);
-  const encrypt = (str1) => {
+  const alps = Object.keys(caps);
+  const encrypt = str1 => {
     if (str1.length < 1) {
-      return undefined
+      return undefined;
     }
-    for (let el in str1) {
-      let temp = str1[el].toUpperCase();
-      let newStr = str1[el].toLowerCase();
+    for (const el in str1) {
+      const temp = str1[el].toUpperCase();
+      const newStr = str1[el].toLowerCase();
       if (!caps[newStr]) {
         return undefined;
       }
@@ -47,19 +47,18 @@ const cipher = (str, shift) => {
         arr.push(alps[alpPos]);
       }
     }
-    return arr.join("");
-  }
+    return arr.join('');
+  };
   if (/\s/.test(str)) {
-    let newArr = [];
-    let arr1 = str.split(' ');
+    const newArr = [];
+    const arr1 = str.split(' ');
     arr1.forEach(str => {
-      newArr.push(encrypt(str))
-      arr = []
-    })
+      newArr.push(encrypt(str));
+      arr = [];
+    });
     return newArr.join(' ');
-  } else {
-    return encrypt(str)
   }
+  return encrypt(str);
 };
 
 export default cipher;
