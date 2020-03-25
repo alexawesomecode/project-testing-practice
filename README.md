@@ -11,31 +11,34 @@
 <br />
 <p align="center">
   <a href="https://www.microverse.org/">
-    <img src="src/assets/microverse.png" alt="Logo" width="80" height="80">
+    <img src="src/microverse.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">
     A project from the Microverse Javascript Curriculum
   </h3>
 
-  <h3 align="center">
-	 Live Version link - https://alexawesomecode.github.io/project-testing-practice/index.html
-  </h3>
 
   <p align="center">
- A Tic Tac Toe Game Project for Microverse. Its also part of the <a href="https://www.theodinproject.com/courses/ruby-on-rails/lessons/final-project">Odin project curriculum.</a>
+ This project comes from the testing practice part of the <a href="https://www.theodinproject.com/courses/javascript/lessons/testing-practice">Odin project curriculum.</a>
     <br/>
 
   </p>
 </p>
 
-## Project A Tic Tac Toe Game App
+## Project: Testing Practice
 
-This is a Tic Tac Toe Game App where you play against an opponent takimg turns on a board. By alternately placing 'X' and 'O' on the board.A winner emerges when a player successfully plaxes the same mark either an 'X' or 'O' on the same row, column or diagonal section of the board
+This project involves using the Jest testing framework to write tests for a couple of basic functions. It is a practice project to test five functions which include:
+
+- capitalize(string) function
+- reverseString(string) function
+- calculator factory function
+- ceasarCipher function
+- Array Analysis function
 
 
 ## Snapshot
-<img src="src/assets/tic-tac-toe.gif" alt="screenshot" width="700" height="400">
+<img src="src/screenshot.png" alt="screenshot">
 
 
 # Test
@@ -48,13 +51,16 @@ This is a Tic Tac Toe Game App where you play against an opponent takimg turns o
 
 # Get Started
 
-Download or clone this [repo here](https://github.com/alexawesomecode/project-testing-practice) and open the 'index.html. file.
+- Download or clone this [repo here](https://github.com/alexawesomecode/project-testing-practice) 
+- Run `npm install` to install project dependency if you have npm pre-installed.
+- Run `npm run test` to run tests.
 
 # Built With
 
 This project was built with these techologies:
 
 * JAVASCRIPT
+* BABEL
 * HTML
 * CSS3
 * JEST
